@@ -1,0 +1,226 @@
+/* =========================
+CORES
+#F6F3EE - BRANCO OVO
+#172B47 - AZUL
+#D2A44E - DOURADO
+#163C37 - VERDE
+
+FONTES
+Tan Pearl
+Montserrat
+Higuen Elegant Serif
+========================= */
+
+/* Import de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: "tan-pearl";
+    src: url("fonts/tan-pearl.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Higuen-serif";
+    src: url("fonts/Higuen-Serif.woff") format("woff");
+}
+
+/* Reset e fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    color: #D2A44E;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #163C37;
+    padding: 20px;
+    font-size: 15px;
+    color: white;
+    width: 100%;
+}
+
+/* SECTIONS */
+section {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6F3EE;
+    padding: 0 20px;
+}
+
+h1 {
+    font-family: "tan-pearl";
+    font-size: 120px;
+    font-weight: 500;
+    color: #172B47;
+    text-align: center;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 500;
+    color: #163C37;
+    text-align: center;
+}
+
+h3 {
+    font-family: "tan-pearl";
+    font-size: 50px;
+    margin-bottom: 60px;
+    text-align: center;
+    color: #172B47;
+}
+
+section h3 {
+    margin-top: 80px;
+    margin-bottom: 60px;
+    text-align: center; 
+}
+
+/* CONTAINER 2 COLUNAS */
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+.esquerda, .direita {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* SOBE */
+.sobre .esquerda {
+    padding-right: 30px;
+}
+
+.sobre .direita img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CONTATO */
+.contato .esquerda {
+    padding-right: 20px;
+    align-items: center;
+}
+
+.form {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border: 1px solid #163C37;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.depoimentos{
+    background-color: #172B47;
+    color: #F6F3EE;
+}
+
+input, select {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: 1px solid #172B47;
+    font-size: 16px;
+}
+
+button {
+    height: 50px;
+    background-color: #D2A44E;
+    color: #F6F3EE;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.contato .direita {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.contato .direita ol {
+    padding-left: 20px;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 300px;
+    background-color: #163C37;
+}
+
+/* RESPONSIVO TABLET */
+@media(max-width: 992px){
+    h1 { font-size: 80px; }
+    h2 { font-size: 32px; }
+    h3 { font-size: 28px; }
+
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .sobre .esquerda, .contato .esquerda {
+        padding-right: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sobre .direita img {
+        width: 80%;
+        height: auto;
+    }
+}
+
+/* RESPONSIVO CELULAR */
+@media(max-width: 600px){
+    h1 { font-size: 50px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 22px; }
+
+    section { padding: 40px 15px; }
+
+    .form { width: 100%; padding: 20px; }
+
+    .sobre .direita img { width: 100%; height: auto; }
+
+    .container { width: 100%; flex-direction: column; gap: 20px; }
+}
